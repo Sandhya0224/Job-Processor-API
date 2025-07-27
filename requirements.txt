@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+temporalio
+pandas
+sqlite-utils
+sqlalchemy
+aiofiles
