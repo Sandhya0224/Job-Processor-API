@@ -50,12 +50,15 @@ job_processor_project/
 git clone https://github.com/Sandhya0224/Job-Processor-API.git
 cd job-processor-fastapi-temporal
 
+---
 
 # Create virtual environment and install dependencies
 python -m venv venv
 source venv/bin/activate       # On Windows use: venv\Scripts\activate
 pip install --upgrade pip
 pip install -r requirements.txt
+
+---
 
 ### Install Temporal CLI (Go version)
 ### Download and install the Temporal CLI from the official release:
@@ -77,12 +80,18 @@ temporal server start-dev
 ### This will start a local Temporal development server accessible at localhost:7233.
 ### Run Temporal Worker In one terminal:
 
+---
+
 python temporal_worker.py
 ### This will start the Temporal worker to handle workflows and activities.
+
+---
 
 ### Run FastAPI App
 uvicorn main:app --reload
 ### FastAPI will start at: http://localhost:8000
+
+---
 
 ### API Usage
 ### POST /jobs/
@@ -93,6 +102,8 @@ uvicorn main:app --reload
   "job_type": "generate_csv",
   "payload": {}
 }
+
+---
 
 ### GET /jobs/{job_id}
 ### Fetch the job status and result:
