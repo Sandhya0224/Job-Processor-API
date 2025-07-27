@@ -46,7 +46,7 @@ job_processor_project/
 
 ## 🧑‍💻 Clone and Run the Project
 
-### 1️⃣ Clone the repository
+### Clone the repository
 git clone https://github.com/Sandhya0224/Job-Processor-API.git
 cd job-processor-fastapi-temporal
 
@@ -57,47 +57,47 @@ source venv/bin/activate       # On Windows use: venv\Scripts\activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
-# Install Temporal CLI (Go version)
-# Download and install the Temporal CLI from the official release:
+### Install Temporal CLI (Go version)
+### Download and install the Temporal CLI from the official release:
 
-# Go to: https://learn.temporal.io/getting_started/python/dev_environment/
+### Go to: https://learn.temporal.io/getting_started/python/dev_environment/
 
-# Download the latest .zip for Windows (e.g., temporal-cli_windows_amd64.zip)
+### Download the latest .zip for Windows (e.g., temporal-cli_windows_amd64.zip)
 
-# Extract it and move the temporal.exe to a folder like C:\temporal-cli\
+### Extract it and move the temporal.exe to a folder like C:\temporal-cli\
 
-# Add the temporal.exe folder to your System PATH:
+### Add the temporal.exe folder to your System PATH:
 
-# Search “Environment Variables” → Edit the PATH variable → Add C:\temporal-cli\
+### Search “Environment Variables” → Edit the PATH variable → Add C:\temporal-cli\
 
-# Verify installation:
+### Verify installation:
 temporal --version
 
 temporal server start-dev
-# This will start a local Temporal development server accessible at localhost:7233.
-# Run Temporal Worker In one terminal:
+### This will start a local Temporal development server accessible at localhost:7233.
+### Run Temporal Worker In one terminal:
 
 python temporal_worker.py
-# This will start the Temporal worker to handle workflows and activities.
+### This will start the Temporal worker to handle workflows and activities.
 
-# Run FastAPI App
+### Run FastAPI App
 uvicorn main:app --reload
-# FastAPI will start at: http://localhost:8000
+### FastAPI will start at: http://localhost:8000
 
-# API Usage
-# POST /jobs/
-# Submit a new job:
+### API Usage
+### POST /jobs/
+### Submit a new job:
 
-# POST /jobs/
+### POST /jobs/
 {
   "job_type": "generate_csv",
   "payload": {}
 }
 
-# GET /jobs/{job_id}
-# Fetch the job status and result:
+### GET /jobs/{job_id}
+### Fetch the job status and result:
 
-# GET /jobs/abc-123
+### GET /jobs/abc-123
 
 {
   "job_id": "abc-123",
