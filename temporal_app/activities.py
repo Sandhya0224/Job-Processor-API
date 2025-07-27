@@ -18,15 +18,9 @@ async def generate_dummy_csv(job_id: str, job_type: str):  # Adjust if you only 
     db.commit()
 
     # Dummy data generation
-    names = [f"Name_{i}" for i in range(1000)]
-    places = ["Chennai", "Mumbai", "Delhi", "Bangalore", "Kolkata"]
-    ages = [random.randint(18, 60) for _ in range(1000)]
-
     df = pd.DataFrame({
-        "id": [str(uuid4()) for _ in range(1000)],
-        "name": names,
-        "place": [random.choice(places) for _ in range(1000)],
-        "age": ages,
+        "Name": [f"Name_{i}" for i in range(1000)],
+        "Value": [i for i in range(1000)],
     })
 
     os.makedirs("output", exist_ok=True)
